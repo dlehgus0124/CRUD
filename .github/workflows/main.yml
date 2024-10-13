@@ -3,7 +3,9 @@ on:
   pull_request_target:
   push:
     branches:
-      - master
+      - main
+      - dohyun
+      - haeun
 
 jobs:
   build:
