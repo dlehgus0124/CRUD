@@ -1,5 +1,5 @@
 import './App.css';
-import axios from 'axios';
+// import axios from 'axios';
 import styled from 'styled-components';
 import React, { useEffect, useState } from 'react';
 import TodoBoard from './components/TodoBoard';
@@ -15,6 +15,11 @@ function App() {
     setInputValue(""); 
   };
 
+  const deleteItem = (index) => {
+    const newTodoList = todoList.filter((_, i) => i !== index);
+    setTodoList(newTodoList);
+  };
+
   const formatDate = (date) => {
     return `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일 ${['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'][date.getDay()]} ${date.getHours()}:${String(date.getMinutes()).padStart(2, '0')}`;
   };
@@ -24,6 +29,7 @@ function App() {
       <main>
         <h1>Today</h1>
         <DateText>{formatDate(currentTime)}</DateText>
+        <TodoBoard todoList={todoList} onDeleteItem={deleteItem}/>
         <div className="input-container">
           <input 
             value={inputValue}
@@ -31,7 +37,6 @@ function App() {
             onChange={(event) => setInputValue(event.target.value)} />
           <button onClick={addItem}>+</button>
         </div>
-        <TodoBoard todoList={todoList}/>
       </main>
     </div>
   );
@@ -46,4 +51,5 @@ const DateText = styled.div`
   font-size: 10px;
   font-weight: 400;
   word-wrap: break-word;
+  margin-bottom: 20px;
 `;

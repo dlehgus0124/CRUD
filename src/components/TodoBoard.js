@@ -1,13 +1,18 @@
-import React from "react";
-import TodoItem from "./TodoItem"; 
+import React from 'react';
+import TodoItem from './TodoItem';
 
-function TodoBoard(props) {
+function TodoBoard({ todoList, onDeleteItem }) {
     return (
-        <div>
-            {props.todoList.map((item) => (
-            <TodoItem item={item} />
+    <div>
+        {todoList.map((item, index) => (
+            <TodoItem 
+            item={item} 
+            key={index} 
+            onDelete={() => onDeleteItem(index)} // 삭제 핸들러 전달
+            />
         ))}
     </div>
-);
+    );
 }
+
 export default TodoBoard;
