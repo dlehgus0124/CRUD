@@ -38,11 +38,15 @@ function App() {
   
       return () => clearInterval(interval);
   }, []);
+<<<<<<< HEAD
 >>>>>>> a39c623 (app.js modified)
+=======
+>>>>>>> a39c623086b579b891f2cb3e24b5f93de376e257
 
   const formatDate = (date) => {
     return `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일 ${['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'][date.getDay()]} ${date.getHours()}:${String(date.getMinutes()).padStart(2, '0')}`;
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -62,6 +66,9 @@ function App() {
     </div>
 =======
   return (
+=======
+  return (
+>>>>>>> a39c623086b579b891f2cb3e24b5f93de376e257
     <Container>
       <Title>Today</Title>
       <DateText>{formatDate(currentTime)}</DateText>
@@ -79,14 +86,20 @@ function App() {
         <AddButtonIcon src="https://via.placeholder.com/12x12" alt="add" />
       </AddButtonContainer>
     </Container>
+<<<<<<< HEAD
 >>>>>>> a39c623 (app.js modified)
+=======
+>>>>>>> a39c623086b579b891f2cb3e24b5f93de376e257
   );
 }
 
 export default App;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a39c623086b579b891f2cb3e24b5f93de376e257
 const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
@@ -108,17 +121,23 @@ const Title = styled.div`
   word-wrap: break-word;
 `;
 
+<<<<<<< HEAD
 >>>>>>> a39c623 (app.js modified)
+=======
+>>>>>>> a39c623086b579b891f2cb3e24b5f93de376e257
 const DateText = styled.div`
   width: 149px;
   height: 12px;
   color: #666666;
   font-size: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-weight: 400;
   word-wrap: break-word;
 `;
 =======
+=======
+>>>>>>> a39c623086b579b891f2cb3e24b5f93de376e257
   font-family: 'NEXON Lv1 Gothic', sans-serif;
   font-weight: 400;
   word-wrap: break-word;
@@ -184,4 +203,7 @@ const AddButtonIcon = styled.img`
   position: absolute;
 `;
 
+<<<<<<< HEAD
 >>>>>>> a39c623 (app.js modified)
+=======
+>>>>>>> a39c623086b579b891f2cb3e24b5f93de376e257
